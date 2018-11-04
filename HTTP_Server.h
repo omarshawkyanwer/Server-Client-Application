@@ -9,6 +9,7 @@
 #ifndef HTTP_Server_h
 #define HTTP_Server_h
 #include <string>
+#include "types.h"
 using namespace std;
 
 

@@ -11,6 +11,7 @@
 #include <ctime>
 #include <string>
 #include <vector>
+#include "types.h"
 using namespace std;
 
 class HTTP_Handler{
