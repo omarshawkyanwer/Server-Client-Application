@@ -8,10 +8,11 @@
 
 #include "HTTP_Handler.h"
 #include "types.h"
+#include "Request_Parser.h"
 using namespace std;
 
 
-HTTP_Handler::HTTP_Handler(Port p,IP_Address ip){
+HTTP_Handler::HTTP_Handler(Port p,IP_Address ip,string && req){
     
 }
 time_t HTTP_Handler::get_Last_Request(){

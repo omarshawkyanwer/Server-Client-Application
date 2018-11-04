@@ -19,7 +19,7 @@ private:
     Port client_Port;
     IP_Address client_IP_Address;
 public:
-    HTTP_Handler(Port p,IP_Address ip);
+    HTTP_Handler(Port p,IP_Address ip,string && req);
     time_t get_Last_Request();
     void shutdown();
 protected:
