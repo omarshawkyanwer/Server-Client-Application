@@ -16,9 +16,11 @@ using namespace std;
 
 
 class Request_Parser{
+    string file_Extension;
 public:
     Request_Parser();
     vector<string> parse_Request(string req);
+    string get_File_Extention();
 };
 
 #endif /* Request_Parser_h */

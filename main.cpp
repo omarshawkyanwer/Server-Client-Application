@@ -10,6 +10,7 @@
 #include "types.h"
 #include "HTTP_Server.h"
 #include "Request_Parser.h"
+#include "Response_Builder.h"
 
 using namespace std;
 
@@ -34,12 +35,27 @@ int main(int argc, const char * argv[]) {
         while(1);
     }
      */
+    
+    /*
     Request_Parser p;
-    string req = "Get /home/omar.txt HTTP1.1\r\nContent_Type:txt\r\nContent_Lenght:anything";
+    string req = "Get /home/omar.html HTTP1.1\r\nContent_Type:txt\r\nContent_Lenght:anything";
     vector<string> v = p.parse_Request(req);
     for(string s : v){
         cout<<s<<endl;
     }
+    cout<<p.get_File_Extention();
+     */
+    
+    
+    Response_Builder r;
+    r.set_Status(true);
+    r.set_Content("<p> The paragraph in an HTML FILE returned from the server <p>");
+    r.set_HTTP_Vesion(HTTP_ONE);
+    r.set_Content_Type("html");
+    string s = r.build_Response();
+    cout<<s<<endl;
+    
+    
     return 0;
 }
 //this port number is used only for testing
