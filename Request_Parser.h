@@ -17,8 +17,8 @@ using namespace std;
 
 class Request_Parser{
 public:
-    Request_parser();
-    vector<string> parser_Request(string req);
+    Request_Parser();
+    vector<string> parse_Request(string req);
 };
 
 #endif /* Request_Parser_h */

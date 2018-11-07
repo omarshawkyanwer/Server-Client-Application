@@ -12,7 +12,7 @@
 using namespace std;
 
 
-HTTP_Handler::HTTP_Handler(Port p,IP_Address ip,string && req){
+HTTP_Handler::HTTP_Handler(int client_Socket){
     
 }
 time_t HTTP_Handler::get_Last_Request(){
@@ -36,6 +36,10 @@ string HTTP_Handler::get_HTTP_Response(){
       return string("bla");
 }
 void HTTP_Handler::send_Response(string response){
+    
+}
+
+void HTTP_Handler::run(){
     
 }
 

@@ -15,6 +15,6 @@ using namespace std;
 //default constructor
 Request_Parser::Request_Parser(){}
 
-vector<string> Request_Parser::parser_Request(string req){
+vector<string> Request_Parser::parse_Request(string req){
     return vector<string>();
 }
