@@ -7,9 +7,32 @@
 //
 
 #include <iostream>
+#include "types.h"
+#include "HTTP_Server.h"
+
+using namespace std;
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    /*
+    if(argc < 2){
+       cout<<"The server port number is not specified"<<endl;
+       exit(0);
+    }
+    Port server_Port = atoi(argv[1]);
+     */
+    
+    HTTP_Server server;
+    Port server_Port = 7799;
+    if(!server.initialize_Conn(LOCALHOST,server_Port)){
+        cout<<"Socket Creation Error"<<endl;
+        exit(0);
+    }else{
+        cout<<"Socket Created Successfully"<<endl;
+        while(1);
+    }
     return 0;
 }
+//this port number is used only for testing
+//Port server_Port = 7799;
+// cout<<LOCALHOST<<endl;

@@ -10,9 +10,11 @@
 #define types_h
 #include <string>
 #include <netinet/in.h>
+#define MAXCONN 50
+#define LOCALHOST "127.0.0.1"
 using namespace std;
 
-typedef in_addr_t Port;
+typedef in_port_t Port;
 typedef string IP_Address;
 
 #endif /* types_h */

@@ -18,12 +18,9 @@ public:
     HTTP_Server();
     //initialize a connection with it's socket
     bool initialize_Conn(IP_Address a,Port p);
-    //start listenning on port p
-    void run_Conn(Port p);
-    //to exit the HTTP server and make it down
+    //start listenning on socket client_Socket
     void shutDown();
-protected:
-    void handle_Request(string req);
+
 };
 
 
