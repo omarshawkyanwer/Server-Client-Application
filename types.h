@@ -23,6 +23,19 @@ using namespace std;
 
 typedef in_port_t Port;
 typedef string IP_Address;
+typedef uint32_t ip_t;
+
+enum HTTP_Request_type {
+GET,
+POST,
+HEAD,
+DELETE,
+PUT
+};
+enum HTTP_VERSION {
+HTTP_1_0,
+HTTP_1_1
+};
 
 
 

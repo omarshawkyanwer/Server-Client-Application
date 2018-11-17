@@ -7,34 +7,55 @@
 //
 
 #include <stdio.h>
+#include<iostream>
 #include "Request_Parser.h"
 #include <vector>
 #include <string>
-#include <sstream>
-#include <iostream>
+
+
+#include "types.h"
+#include <regex>
+
+
 using namespace std;
 
 //default constructor
 Request_Parser::Request_Parser(){}
 
-vector<string> Request_Parser::parse_Request(string req){
-    vector<string> result;
-    string first_Line;
-    istringstream request(req);
-    getline(request, first_Line);
-    istringstream first_Line_Stream(first_Line);
-    string first_Line_field;
-    while (getline(first_Line_Stream,first_Line_field,' ')) {
-        result.push_back(first_Line_field);
+
+struct HTTP_Request Request_Parser::parse(string req){
+     std::smatch m;
+      regex e ("(GET|POST|PUT|HEAD|DELETE) ([^ ]+) HTTP/1\.(0|1)\r\n((\s*[^ ^:]+\s*:\s*[^\n]+\n)*)");
+    regex_search(req,m,e);
+    vector<string> parts;
+    for (auto i:m) {
+    cout<<parts.size()<<" "<<i<<"..\n";
+    parts.push_back(i);
     }
-    //set the file extention which is at result[1]
-    file_Extension = "";
-    for(int i = ((int)result[1].size()) - 1 ;result[1][i] != '.'; i-- )
-        file_Extension.push_back(result[1][i]);
-    reverse(file_Extension.begin(),file_Extension.end());
-    return result;
+    struct HTTP_Request request;
+    request.type = (parts[1]=="GET")? GET:POST;
+    request.resource = parts[2];
+    request.version = (parts[3]=="0")?HTTP_1_0:HTTP_1_1;
+        string headers = parts[4];
+      smatch h;
+        regex regx("\s*([^ ^:]+)\s*:\s*([^\n]+)\n");
+        while(regex_search(headers,h,regx)){
+        vector<string> vals;
+        for (auto i:h) {
+            vals.push_back(i);
+        }
+        request.headers[vals[1]] = vals[2];
+        headers =  h.suffix().str();
+
+        }
+        return request;
+}
+bool Request_Parser::validate(string req) {
+      regex e ("(GET|POST|PUT|HEAD|DELETE) ([^ ]+) HTTP/1\.(0|1)\r\n((\s*[^ ^:]+\s*:\s*[^\n]+\n)*)");
+smatch m;
+    return regex_match(req,m,e);
+
 }
 
-string Request_Parser::get_File_Extention(){
-    return file_Extension;
-}
+string Request_Parser::sep = string({13,10,0});
+
