@@ -9,16 +9,19 @@
 #ifndef Request_Parser_h
 #define Request_Parser_h
 #include <vector>
+#include "types.h"
 #include <string>
-
+#include "HTTP_Handler.h"
 using namespace std;
 
 
 
 class Request_Parser{
 public:
+    static string sep;
     Request_Parser();
-    vector<string> parse_Request(string req);
+    struct HTTP_Request parse(string req);
+    bool validate(string req);
 };
 
 #endif /* Request_Parser_h */

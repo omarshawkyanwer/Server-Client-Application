@@ -15,15 +15,18 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
-    /*
+
+    Port server_Port;
+
     if(argc < 2){
        cout<<"The server port number is not specified"<<endl;
-       exit(0);
+       //exit(0);
+       server_Port = 7989;
     }
-    Port server_Port = atoi(argv[1]);
-     */
-    
-    /*
+
+    else
+     server_Port = atoi(argv[1]);
+
     HTTP_Server server;
     Port server_Port = 7799;
     if(!server.initialize_Conn(LOCALHOST,server_Port)){
@@ -40,6 +43,7 @@ int main(int argc, const char * argv[]) {
     for(string s : v){
         cout<<s<<endl;
     }
+    server.main_thread->join();
     return 0;
 }
 //this port number is used only for testing
