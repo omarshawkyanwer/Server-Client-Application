@@ -10,6 +10,7 @@
 #include "types.h"
 #include "HTTP_Server.h"
 #include "Request_Parser.h"
+#include "Response_Builder.h"
 
 using namespace std;
 
@@ -36,14 +37,8 @@ int main(int argc, const char * argv[]) {
         cout<<"Socket Created Successfully"<<endl;
         while(1);
     }
-     */
-    Request_Parser p;
-    string req = "Get /home/omar.txt HTTP1.1\r\nContent_Type:txt\r\nContent_Lenght:anything";
-    vector<string> v = p.parse_Request(req);
-    for(string s : v){
-        cout<<s<<endl;
-    }
     server.main_thread->join();
+
     return 0;
 }
 //this port number is used only for testing

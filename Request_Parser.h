@@ -17,11 +17,13 @@ using namespace std;
 
 
 class Request_Parser{
+    string file_Extension;
 public:
     static string sep;
     Request_Parser();
     struct HTTP_Request parse(string req);
     bool validate(string req);
+
 };
 
 #endif /* Request_Parser_h */
