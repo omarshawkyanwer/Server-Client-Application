@@ -15,6 +15,7 @@
 using namespace std;
 
 
+
 HTTP_Handler::HTTP_Handler(int socketfd,struct sockaddr_in address){
     this->socketfd = socketfd;
     sockaddr_in add;
@@ -22,7 +23,6 @@ HTTP_Handler::HTTP_Handler(int socketfd,struct sockaddr_in address){
     char ip_add[20];
     this->client_IP_Address = inet_ntop(AF_INET,&add.sin_addr.s_addr,ip_add,20);
     parser = new Request_Parser();
-
 }
 time_t HTTP_Handler::get_Last_Request(){
     return time(nullptr);
@@ -70,5 +70,9 @@ string HTTP_Handler::get_HTTP_Response(int status,string resource){
 }
 int  HTTP_Handler::send_Response(string response){
      return send(socketfd,response.c_str(),response.size(),0);
+}
+
+void HTTP_Handler::run(){
+    
 }
 

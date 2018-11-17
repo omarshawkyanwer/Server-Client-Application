@@ -17,9 +17,11 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+
 #include <errno.h>
 #include <thread>         // std::thread
 #include <mutex>
+
 
 using namespace std;
 
@@ -29,10 +31,15 @@ HTTP_Server::HTTP_Server(){
     max_queued = MAXCONN;
 }
 
+void handle_Request(int client_Socket){
+    HTTP_Handler request_handler(client_Socket);
+    request_handler.run();
+}
+
 bool HTTP_Server::initialize_Conn(IP_Address ip_Address,Port port_Number){
+
     int serverSocket;
     struct sockaddr_in serverAddr,remoteAddr;
-
     serverSocket = socket(PF_INET, SOCK_STREAM, 0);
     if(serverSocket < 0)
         return false;
@@ -40,6 +47,7 @@ bool HTTP_Server::initialize_Conn(IP_Address ip_Address,Port port_Number){
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port_Number);
     serverAddr.sin_addr.s_addr = inet_addr(ip_Address.c_str());
+
     int bind_Socket = bind(serverSocket, (struct sockaddr *) &serverAddr, sizeof(serverAddr));
     this->serverSocket = serverSocket;
     if(bind_Socket < 0 )
@@ -48,9 +56,7 @@ bool HTTP_Server::initialize_Conn(IP_Address ip_Address,Port port_Number){
     }
     int optval = 1;
     setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
-
     main_thread = new thread(&HTTP_Server::waitForRequests,this);
-
     return true;
 }
 

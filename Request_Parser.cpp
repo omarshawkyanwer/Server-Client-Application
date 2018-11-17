@@ -11,12 +11,15 @@
 #include "Request_Parser.h"
 #include <vector>
 #include <string>
+
 #include "types.h"
 #include <regex>
+
 using namespace std;
 
 //default constructor
 Request_Parser::Request_Parser(){}
+
 
 struct HTTP_Request Request_Parser::parse(string req){
      std::smatch m;
@@ -44,7 +47,6 @@ struct HTTP_Request Request_Parser::parse(string req){
 
         }
         return request;
-
 }
 bool Request_Parser::validate(string req) {
       regex e ("(GET|POST|PUT|HEAD|DELETE) ([^ ]+) HTTP/1\.(0|1)\r\n((\s*[^ ^:]+\s*:\s*[^\n]+\n)*)");

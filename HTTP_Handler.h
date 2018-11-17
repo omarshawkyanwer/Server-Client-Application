@@ -33,10 +33,12 @@ class HTTP_Handler{
 private:
 
 public:
+
     HTTP_Handler(int socketfd,struct sockaddr_in address);
     time_t get_Last_Request();
     void shutdown();
-     friend class HTTP_Server;
+    friend class HTTP_Server;
+
 protected:
     Request_Parser *parser;
     char buffer[2048];

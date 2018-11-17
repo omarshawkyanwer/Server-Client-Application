@@ -21,6 +21,7 @@ public:
     HTTP_Server();
     //initialize a connection with it's socket
     bool initialize_Conn(IP_Address a,Port p);
+
     //start listenning on port p
     void run_Conn();
     //to exit the HTTP server and make it down
@@ -47,6 +48,7 @@ protected:
     int serverSocket;
     int max_queued;
     void handle_Request(int socketfd,struct sockaddr_in address);
+
 };
 
 
