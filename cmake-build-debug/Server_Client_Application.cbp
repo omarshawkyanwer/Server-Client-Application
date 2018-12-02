@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="Server_Client_Application" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Server_Client_Application">
+         <Option output="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Server_Client_Application" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/ahmed/Desktop/Networks/Server-Client-Application/." />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/i386-linux-gnu" />
+            <Add directory="/usr/include/i386-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/i686-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/i686-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server_Client_Application" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Server_Client_Application/fast">
+         <Option output="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Server_Client_Application" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/ahmed/Desktop/Networks/Server-Client-Application/." />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/i386-linux-gnu" />
+            <Add directory="/usr/include/i386-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/i686-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/i686-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Server_Client_Application/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ahmed/Desktop/Networks/Server-Client-Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/File_System.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/File_System.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/HTTP_Handler.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/HTTP_Handler.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/HTTP_Server.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/HTTP_Server.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/Request_Parser.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/Request_Parser.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/Request_Parser.hpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/Response_Builder.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/Response_Builder.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/main.cpp">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/types.h">
+         <Option target="Server_Client_Application"/>
+      </Unit>
+      <Unit filename="/home/ahmed/Desktop/Networks/Server-Client-Application/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

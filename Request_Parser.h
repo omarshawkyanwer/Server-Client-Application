@@ -23,6 +23,7 @@ public:
     Request_Parser();
     struct HTTP_Request parse(string req);
     bool validate(string req);
+    bool no_request(string req);
 
 };
 

@@ -13,7 +13,8 @@
 #include <fstream>
 #include <string>
 #include <unistd.h>
-
+#include <algorithm>
+#include <iostream>
 using namespace std;
 
 File_System::File_System(){}
@@ -39,6 +40,7 @@ void File_System::write_File(string new_File_Content, string file_Path_With_Name
 
 string File_System::read_File(string file_Name){
     //if file exists
+    std::cout<<"fetching file "<<file_Name<<endl;
     if(access( file_Name.c_str(), F_OK ) != -1){
         add_File_To_Map(file_Name);
         lock_guard<mutex> lock_File(*file_Name_Lock[file_Name]);
@@ -53,6 +55,7 @@ string File_System::read_File(string file_Name){
             content.push_back(buffer[i]);
         delete [] buffer;
         file_To_Read.close();
+        cout<<"returning "<<content<<endl;
         return content;
     }else{
         return string();

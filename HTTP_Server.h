@@ -10,6 +10,7 @@
 #define HTTP_Server_h
 #include <string>
 #include "types.h"
+#include "HTTP_Handler.h"
 #include <thread>
 #include <mutex>
 #include <vector>
@@ -29,19 +30,23 @@ public:
 
     void shutDown();
     friend int main(int argc, const char * argv[]) ;
-
-    friend int mains(int argc, const char * argv[]) ;
+    ~HTTP_Server();
 
 protected:
     thread *main_thread;
+    thread *monitor_thread;
 
     void waitForRequests();
-   // friend void habalo(HTTP_Server *s);
     mutex handlers_mutex;
-    vector<thread*> request_handlers;
-
+    bool is_alive;
+    //map<thread*,HTTP_Handler *> request_handlers;
+    HTTP_Handler * request_handlers[50];
+    bool used[50];
+    int living_clients;
     mutex listening_mutex;
     bool listening;
+    void monitor_connections();
+
 
     IP_Address server_ip;
     Port server_port;
